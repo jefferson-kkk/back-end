@@ -7,10 +7,10 @@ echo "\nAnos após o comando replace: \n", $exerc3;
 
 
 <?php
-$nota1 = 2;
-$nota2 = 2;
+$nota1 = (float) readline(prompt: "digite a primeira nota:");
+$nota2 = (float) readline(prompt:"digite a seginda nota:");
 $media = ($nota1 + $nota2)/2;
-$frequencia = 45;
+$frequencia = (int) readline(prompt:"digite a frequencia do aluno:");
 $aluno  = "enzo";
 if ($media >= 5 and $media < 7 and $frequencia >=50 and $frequencia <= 70 ) {
     echo "aprovado: media igual $media mas é recomndavel que venha mais a escola e estude mais";
