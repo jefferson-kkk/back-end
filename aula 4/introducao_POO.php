@@ -1,23 +1,23 @@
 <?php
-$modelo_carro1=Versa;
-$modelo_carro1=Nissan;
+$modelo_carro1='Versa';
+$modelo_carro1='Nissan';
 $ano_carro1=2020;
-$revisao_carro1=true;
-$ndonos_carro1=2;
+$revisao_carro1= true;
+$ndonos_carro1= 2;
 
-$modelo_carro2=M5;
-$modelo_carro2=BMW;
+$modelo_carro2='M5';
+$modelo_carro2='BMW';
 $ano_carro2=2018;
 $revisao_carr2=false;
 $ndonos_carro2=2;
 
-$modelo_carro3=911;
-$modelo_carro3=Porche;
+$modelo_carro3='911';
+$modelo_carro3='Porche';
 $ano_carro3=2026;
 $revisao_carro3=false;
            
-$modelo_carr4=Dolphin;
-$modelo_carro4=BYD;
+$modelo_carr4='Dolphin';
+$modelo_carro4='BYD';
 $ano_carro4=2023;
 $revisao_carro4=false;
 $ano_carro4= 1;
