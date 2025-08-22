@@ -24,7 +24,20 @@ public function __construct($nome, $cpf, $sexo, $email, $estado_civil, $cidade, 
     $this-> cep = $cep;
     $this-> sexo = $sexo;
 }
-
+ public function testando_reservista(){
+ if($this->sexo == "Masculino"){
+    echo"apresente seu certificado de reservista do tiro de guerra!";
+ }else{
+    echo"Tudo certo";
+ }
+ }
+ public function casamento($anos_casados){
+    if($this->estado_civil == "Casado"){
+        echo"parabéns pelo seus casamento de $anos_casados";
+    }else{
+        echo "Oloco";
+    }
+ }
 }
 
 $usuario1 = new usuario(
@@ -35,4 +48,7 @@ $usuario2 = new usuario( "Valentina Passos Scherrer","070.070.060-70","Feminino"
 );
 
 $usuario3 = new usuario( "Claudio Braz Nepumoceno", "575.575.242-32","Masculino","Clauclau.nepumoceno@gmail.com","Solteiro","Piripiri","Piauí","Estrada 3, 33","12345");
+
+$usuario1->testando_reservista();
+$usuario1->casamento(9);
 ?>

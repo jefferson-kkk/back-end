@@ -14,6 +14,12 @@ class cachorro {
         $this->castrado = $castrado;
         $this->sexo = $sexo;
     }
+    public function latir(){
+        echo "O cachorro $this->nome está latindo";
+    }
+    public function marca_territorio(){
+        echo "O cachorro $this->nome da raça $this->raca está marcando território";
+    }
 }
 $dog1 = new cachorro("Max", 5, "Labrador", true, "M");
 $dog2 = new cachorro("Bella", 3, "Poodle", false, "F");
@@ -25,3 +31,6 @@ $dog7 = new cachorro("Bob", 7, "Dachshund", true, "M");
 $dog8 = new cachorro("Nina", 2, "Yorkshire", false, "F");
 $dog9 = new cachorro("Toby", 8, "Pastor Alemão", true, "M");
 $dog10 = new cachorro("Maggie", 5, "Boxer", false, "F");
+
+$dog1->latir();
+$dog1->marca_territorio();
