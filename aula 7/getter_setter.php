@@ -30,23 +30,17 @@ class pessoa{
 }
     public function settelefone($telefone) {
     $this ->telefone = preg_replace('/\D/', "", $telefone);
-} public function gettelefone(){
+}   public function gettelefone(){
     return $this ->telefone;
-} public function setidade($idade){
+}   public function setidade($idade){
     $this ->idade = abs((int)$idade);
-} public function getidade(){
+}   public function getidade(){
     return $this -> idade;
 }
 }
 
-<<<<<<< HEAD
 $pessoa1 = new pessoa(" JeFF", "376-756-509-43", "19-7546-6540", -18, "jeff.2008@gmail.com ", "12345");
 
 echo $pessoa1 ->getnome();
-=======
-$aluno1 = new pessoa(" JeFF", "376-756-509-43", "19-7546-6540", -18, "jeff.2008@gmail.com ", "12345");
-
-echo $aluno1 ->getnome();
->>>>>>> 2565b21c768b569a74be469f54d79d7e4b9b1152
 
 ?>

@@ -136,7 +136,7 @@ class funcionario{
     public function __construct($nome, $salario) {
         $this->  setnome($nome);
         $this -> setsalario($salario);
-
+ 
     }
     public function setnome($nome){
         $this ->nome = ucwords (strtolower($nome));
