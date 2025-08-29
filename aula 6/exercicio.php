@@ -24,6 +24,6 @@ $feijao1 -> qtde_estoque = 123;
 $arroz1 = new produto();
 $arroz1 -> nome = "prato fino";
 $arroz1 -> categoria = "mantimentos";
-$arroz -> fornecedor = "pirahy";
+$arroz1 -> fornecedor = "pirahy";
 $arroz1 ->categoria =100;
 ?>
