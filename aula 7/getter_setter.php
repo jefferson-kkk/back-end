@@ -39,8 +39,14 @@ class pessoa{
 }
 }
 
+<<<<<<< HEAD
 $pessoa1 = new pessoa(" JeFF", "376-756-509-43", "19-7546-6540", -18, "jeff.2008@gmail.com ", "12345");
 
 echo $pessoa1 ->getnome();
+=======
+$aluno1 = new pessoa(" JeFF", "376-756-509-43", "19-7546-6540", -18, "jeff.2008@gmail.com ", "12345");
+
+echo $aluno1 ->getnome();
+>>>>>>> 2565b21c768b569a74be469f54d79d7e4b9b1152
 
 ?>
