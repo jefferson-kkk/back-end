@@ -12,15 +12,17 @@ class imovel{
         $this->$estado_conservacao=$estado_conservacao;
         
 }
+}
 class casa extends imovel{
     private $tem_quintal; // atributo booleano - true false
 
     
-} public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tem_quintal){
+ public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tem_quintal){
     parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
     $this -> tem_quintal=$tem_quintal;
 }
 }
+
 class apartamento extends imovel{
     private $andar;
 
@@ -33,9 +35,18 @@ class apartamento extends imovel{
 // crie uma subclasse chamada escola como atributo $seguimento.
 class escola extends imovel {
     private $seguimento;
-    public function __construct($categoria, $ncomodos, $valor, $estado_conservacao, $seguimento){
-        parent::_construct($categoria, $n_comodos, $valor, $estado_conservacao);
+    public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $seguimento){
+        parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
         $this -> seguimento = $seguimento;
+    }
+}
+
+class comercio extends imovel{
+    private $tamanho;
+    public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tamanho){
+        parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao,);
+        $this -> tamanho = $tamanho;
+
     }
 }
 ?>
