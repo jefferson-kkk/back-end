@@ -1,6 +1,4 @@
 <?php
-
-
 interface calculadora {
     public function somar();
 }
