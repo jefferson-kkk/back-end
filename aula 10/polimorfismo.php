@@ -44,4 +44,4 @@ $barco = new barco();
 echo $barco->mover();
 
 $elevador = new elevador();
-echo $elevador->mover();
+echo $elevador->mover();    
