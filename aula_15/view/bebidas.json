@@ -1,16 +1,9 @@
 {
-    "cacha\u00e7a": {
-        "nome": "cacha\u00e7a",
-        "categoria": "Destilado",
-        "volume": "100",
-        "valor": "200",
-        "qtde": "2"
-    },
-    "Urina de boi": {
-        "nome": "Urina de boi",
-        "categoria": "Destilado",
-        "volume": "5000 ml",
-        "valor": "30.00",
-        "qtde": "1"
+    "Vinho Tinto Cartuxa Pêra-manca Portugal": {
+        "nome": "Vinho Tinto Cartuxa Pêra-manca Portugal",
+        "categoria": "Refrigerante",
+        "volume": "757",
+        "valor": "100",
+        "qtde": "3"
     }
 }
