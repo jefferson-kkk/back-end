@@ -1,4 +1,5 @@
 <?php
+
 // CORRIGIR ESTAS LINHAS:
 require_once __DIR__ . '/../modelo/BebidaDAO.php';
 require_once __DIR__ . '/../modelo/bebidas.php';
