@@ -1,0 +1,42 @@
+{
+    "Tomate": {
+        "nome": 1,
+        "codigo": "Tomate",
+        "preco": 10
+    },
+    "Ma\u00e7a": {
+        "nome": 2,
+        "codigo": "Ma\u00e7a",
+        "preco": 5.99
+    },
+    "Queijo Brie": {
+        "nome": 3,
+        "codigo": "Queijo Brie",
+        "preco": 45.9
+    },
+    "Iogurte Grego": {
+        "nome": 4,
+        "codigo": "Iogurte Grego",
+        "preco": 8.5
+    },
+    "Guaran\u00e1 Jesus": {
+        "nome": 5,
+        "codigo": "Guaran\u00e1 Jesus",
+        "preco": 7.99
+    },
+    "Bolacha Bono": {
+        "nome": 6,
+        "codigo": "Bolacha Bono",
+        "preco": 3.99
+    },
+    "Desinfetante Urca": {
+        "nome": 7,
+        "codigo": "Desinfetante Urca",
+        "preco": 12.9
+    },
+    "Prestobarba Bic": {
+        "nome": 8,
+        "codigo": "Prestobarba Bic",
+        "preco": 15.99
+    }
+}
