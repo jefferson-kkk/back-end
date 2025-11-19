@@ -257,7 +257,7 @@ $lista = $controller->ler();
             document.getElementById('acao').value = 'salvar';
             
             // Atualiza visual
-            document.getElementById('submitBtn').textContent = 'Atualizar';
+            document.getElementById('submitBtn').textContent = 'atualizar';
             document.getElementById('cancelBtn').style.display = 'block';
             
             // Scroll suave até o form

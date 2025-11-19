@@ -8,19 +8,27 @@ $controller = new BebidaController();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['acao'])) {
         if ($_POST['acao'] === 'salvar') {
-            // Se tem nome_original, é edição
+            // CORREÇÃO: Lógica de atualização corrigida
             if (!empty($_POST['nome_original'])) {
-                $controller->deletar($_POST['nome_original']);
+                // É edição - usa o método atualizar
+                $controller->atualizar(
+                    $_POST['nome_original'], // nome original
+                    $_POST['nome'],          // novo nome
+                    $_POST['categoria'],
+                    $_POST['volume'],
+                    $_POST['valor'],
+                    $_POST['qtde']
+                );
+            } else {
+                // É criação - usa o método criar
+                $controller->criar(
+                    $_POST['nome'],
+                    $_POST['categoria'],
+                    $_POST['volume'],
+                    $_POST['valor'],
+                    $_POST['qtde']
+                );
             }
-            
-            // Cria/recria com os novos dados
-            $controller->criar(
-                $_POST['nome'],
-                $_POST['categoria'],
-                $_POST['volume'],
-                $_POST['valor'],
-                $_POST['qtde']
-            );
             
         } elseif ($_POST['acao'] === 'deletar') {
             $controller->deletar($_POST['nome']);
@@ -217,15 +225,16 @@ $lista = $controller->ler();
                         <td><?php echo htmlspecialchars($bebida->getNome()); ?></td>
                         <td><?php echo htmlspecialchars($bebida->getCategoria()); ?></td>
                         <td><?php echo htmlspecialchars($bebida->getVolume()); ?></td>
-                        <td>R$ <?php echo htmlspecialchars($bebida->getValor()); ?></td>
+                        <td>R$ <?php echo number_format($bebida->getValor(), 2, ',', '.'); ?></td>
                         <td><?php echo htmlspecialchars($bebida->getQtde()); ?></td>
                         <td>
+                            <!-- CORREÇÃO: Removido json_encode para evitar problemas -->
                             <button type="button" class="btn-edit" onclick="editarBebida(
-                                <?php echo json_encode($bebida->getNome()); ?>,
-                                <?php echo json_encode($bebida->getCategoria()); ?>,
-                                <?php echo json_encode($bebida->getVolume()); ?>,
-                                <?php echo json_encode($bebida->getValor()); ?>,
-                                <?php echo json_encode($bebida->getQtde()); ?>
+                                '<?php echo addslashes($bebida->getNome()); ?>',
+                                '<?php echo addslashes($bebida->getCategoria()); ?>',
+                                '<?php echo addslashes($bebida->getVolume()); ?>',
+                                '<?php echo $bebida->getValor(); ?>',
+                                '<?php echo $bebida->getQtde(); ?>'
                             )">Editar</button>
                             
                             <form method="POST" style="display:inline">
@@ -239,18 +248,19 @@ $lista = $controller->ler();
             </tbody>
         </table>
     <?php else: ?>
-        <p class="no-data">Nenhuma bebida cadastrada.</p>
+        <p style="text-align: center; color: #666; margin-top: 2rem;">Nenhuma bebida cadastrada.</p>
     <?php endif; ?>
 
     <script>
         function editarBebida(nome, categoria, volume, valor, qtde) {
-            console.log("Editando:", {nome, categoria, volume, valor, qtde}); // Debug
+            console.log("Editando:", nome, categoria, volume, valor, qtde);
             
+            // CORREÇÃO: Preenche os campos do formulário
             document.getElementById('nome').value = nome;
             document.getElementById('categoria').value = categoria;
             document.getElementById('volume').value = volume;
-            document.getElementById('valor').value = valor;
-            document.getElementById('qtde').value = qtde;
+            document.getElementById('valor').value = parseFloat(valor);
+            document.getElementById('qtde').value = parseInt(qtde);
             
             // Marca como edição
             document.getElementById('nome_original').value = nome;
@@ -275,6 +285,9 @@ $lista = $controller->ler();
             document.getElementById('submitBtn').textContent = 'Cadastrar';
             document.getElementById('cancelBtn').style.display = 'none';
         }
+
+        // CORREÇÃO: Debug - verifica se a função está sendo chamada
+        console.log("JavaScript carregado - função editarBebida disponível");
     </script>
 </body>
 </html>
