@@ -1,6 +1,6 @@
 <?php
 
-class livros {
+class Livros {
     private $titulo;
     private $autor;
     private $ano_publicacao;
@@ -8,45 +8,44 @@ class livros {
     private $qntd_disponivel;
 
     public function __construct($titulo, $autor, $ano_publicacao, $genero, $qntd_disponivel){
-        $this-> titulo = $titulo;
-        $this-> autor = $autor;
-        $this-> ano_publicacao = $ano_publicacao;
-        $this-> genero = $genero;
-        $this-> qntd_disponivel = $qntd_disponivel;
-        
+        $this->titulo = $titulo;
+        $this->autor = $autor;
+        $this->ano_publicacao = $ano_publicacao;
+        $this->genero = $genero;
+        $this->qntd_disponivel = $qntd_disponivel;
     }
+
     // getters
-    public function Gettitulo(){
+    public function getTitulo(){
         return $this->titulo;
     }
-    public function Getautor(){
+    public function getAutor(){
         return $this->autor;
     }
-    public function Getano_publicacao(){
+    public function getAno_Publicacao(){
         return $this->ano_publicacao;
     }
-    public function Getgenero(){
-        return $this-> genero;
+    public function getGenero(){
+        return $this->genero;
     }
-    public function Getqntd_disponivel(){
-        return $this-> qntd_disponivel;
+    public function getQntd_Disponivel(){
+        return $this->qntd_disponivel;
     }
 
     // setters
-    public function Settitulo($titulo){
-        return $this->titulo;
+    public function setTitulo($titulo){
+        $this->titulo = $titulo;
     }
-    public function Setautor($autor){
-        return $this->autor;
+    public function setAutor($autor){
+        $this->autor = $autor;
     }
-    public function Setano_publicacao($ano_publicacao){
-        return $this->ano_publicacao;
+    public function setAno_Publicacao($ano_publicacao){
+        $this->ano_publicacao = $ano_publicacao;
     }
-    public function Setgenero($genero){
-        return $this-> genero;
+    public function setGenero($genero){
+        $this->genero = $genero;
     }
-    public function Setqntd_disponivel($qntd_disponivel){
-        return $this-> qntd_disponivel;
-
+    public function setQntd_Disponivel($qntd_disponivel){
+        $this->qntd_disponivel = $qntd_disponivel;
     }
 }

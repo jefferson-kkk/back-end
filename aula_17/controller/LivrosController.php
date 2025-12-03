@@ -27,7 +27,6 @@ class LivrosController {
         return $this->dao->excluirLivro($titulo);
     }
 
-
     public function buscarPorTitulo($titulo) {
         return $this->dao->buscarPorTitulo($titulo);
     }

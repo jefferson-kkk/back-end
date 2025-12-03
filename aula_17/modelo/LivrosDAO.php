@@ -49,7 +49,7 @@ class LivroDao{
                 $row['autor'],
                 $row['ano_publicacao'],
                 $row['genero'],
-                $row['qntd_disponivel'],
+                $row['qntd_disponivel']
             );
         }
         return $livros;
@@ -95,16 +95,16 @@ class LivroDao{
                 $row['autor'],
                 $row['ano_publicacao'],
                 $row['genero'],
-                $row['qtnd_disponivel']
+                $row['qntd_disponivel']
             );
         }
         return null;
     }
 
-    // BUSCAR POR ID
-    public function buscarPorLivro($Livros) {
-        $stmt = $this->conn->prepare("SELECT * FROM livros WHERE livros = :livros LIMIT 1");
-        $stmt->execute([':livros' => $Livros]);
+    // BUSCAR POR ID (se necessário, mas note que a tabela tem id)
+    public function buscarPorId($id) {
+        $stmt = $this->conn->prepare("SELECT * FROM livros WHERE id = :id LIMIT 1");
+        $stmt->execute([':id' => $id]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         
         if ($row) {
